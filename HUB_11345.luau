@@ -8,14 +8,22 @@
 ]=]
 
 -- Instances: 63 | Scripts: 1 | Modules: 4 | Tags: 0
-local G2L = {};
+local G2L = {}
 
-G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
-G2L["1"]["IgnoreGuiInset"] = true;
-G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
-G2L["1"]["Name"] = [[HUB]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L[“1”] = Instance.new(“ScreenGui”,
+game:GetService(“Players”).LocalPlayer:WaitForChild(“PlayerGui”))
+G2L[“1”].IgnoreGuiInset = true G2L[“1”].ScreenInsets =
+Enum.ScreenInsets.DeviceSafeInsets G2L[“1”].Name = “HUB”
+G2L[“1”].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+G2L[“2”] = Instance.new(“CanvasGroup”, G2L[“1”])
+G2L[“2”].BackgroundTransparency = 1 G2L[“2”].Size = UDim2.new(1,0,1,0)
+
+G2L[“3”] = Instance.new(“Frame”, G2L[“2”]) G2L[“3”].Name = “BackGround”
+G2L[“3”].BackgroundColor3 = Color3.fromRGB(31,31,31)
+G2L[“3”].BackgroundTransparency = 0.25 G2L[“3”].Size =
+UDim2.new(0.43099,0,0.52719,0) G2L[“3”].Position =
+UDim2.new(0.22581,0,0.2364,0)
 
 -- StarterGui.HUB.CanvasGroup
 G2L["2"] = Instance.new("CanvasGroup", G2L["1"]);
